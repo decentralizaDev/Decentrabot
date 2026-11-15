@@ -1,0 +1,182 @@
+/* ============================================================
+   DecentraBot — hoja de estilos
+   Tema oscuro con acento morado (combinado con tu avatar)
+   ============================================================ */
+
+/* 1. VARIABLES: cambia los colores de TODA la página desde aquí */
+:root {
+  --fondo: #0e0e14;          /* color de fondo general */
+  --tarjeta: #17171f;        /* fondo de botones y tarjetas */
+  --borde: #2a2a36;          /* líneas divisorias */
+  --texto: #f4f4f6;          /* texto principal */
+  --texto-suave: #a3a3b2;    /* texto secundario */
+  --acento: #a855f7;         /* morado: botones activos, avatar */
+  --acento-suave: rgba(168, 85, 247, 0.12);  /* brillo del acento */
+}
+
+/* 2. RESET: quita márgenes por defecto y hace que el padding
+      no ensanche las cajas (box-sizing) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  min-height: 100vh;           /* mínimo alto de toda la ventana */
+  display: flex;
+  justify-content: center;   /* centra la tarjeta horizontalmente */
+  padding: 32px 16px;          /* aire arriba/abajo y a los lados */
+}
+
+/* 3. LA TARJETA: ancho de móvil, centrada */
+.tarjeta {
+  width: 100%;
+  max-width: 420px;            /* nunca más ancha que un teléfono */
+  text-align: center;
+}
+
+/* 4. ENCABEZADO */
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;          /* círculo perfecto */
+  object-fit: cover;           /* recorta la foto sin deformarla */
+  border: 3px solid var(--acento);
+  box-shadow: 0 0 32px var(--acento-suave);   /* halo morado */
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 12px;
+}
+
+.bio {
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* 5. BOTONES DE ENLACES (nav) */
+.enlaces {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;      /* uno debajo del otro */
+  gap: 12px;
+}
+
+.boton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 20px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  color: var(--texto);
+  text-decoration: none;       /* quita el subrayado del enlace */
+  font-weight: 600;
+  /* transición suave para el efecto hover (abajo) */
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+/* :hover = estilo cuando el mouse pasa encima */
+.boton:hover {
+  border-color: var(--acento);
+  background: var(--acento-suave);
+  transform: translateY(-2px); /* pequeño "salto" */
+}
+
+.icono {
+  color: var(--acento);
+}
+
+/* 6. SECCIÓN DE CURSOS */
+.cursos {
+  margin-top: 32px;
+  text-align: left;
+}
+
+.cursos h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--texto-suave);
+  margin-bottom: 12px;
+}
+
+.curso {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  color: var(--texto);
+  text-decoration: none;
+  transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.curso:hover {
+  border-color: var(--acento);
+  background: var(--acento-suave);
+  transform: translateY(-2px);
+}
+
+.curso-num {
+  font-family: "Courier New", monospace;
+  font-weight: 700;
+  color: var(--acento);
+}
+
+.curso-info {
+  flex: 1;                     /* ocupa todo el espacio disponible */
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.curso-info small {
+  color: var(--texto-suave);
+  font-size: 12px;
+}
+
+.flecha {
+  color: var(--texto-suave);
+}
+
+/* 7. FOOTER */
+footer {
+  margin-top: 32px;
+  color: var(--texto-suave);
+  font-size: 13px;
+}
+
+/* 8. TARJETA "PRÓXIMAMENTE" (sin enlace, más tenue) */
+.proximamente {
+  cursor: default;             /* sin manita de "clic aquí" */
+}
+
+/* anulamos el hover del curso normal para que no parezca clicable */
+.proximamente:hover {
+  transform: none;
+  border-color: var(--borde);
+  background: var(--tarjeta);
+}
+
+.chip-prox {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--acento);
+  background: var(--acento-suave);
+  border-radius: 6px;
+  padding: 3px 8px;
+  white-space: nowrap;
+}

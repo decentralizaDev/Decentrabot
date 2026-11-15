@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos: no se ven, pero le dicen al navegador cómo leer la página -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DecentraBot — Links</title>
+  <meta name="description" content="Trading de crypto, acciones, oro y petróleo. Minería de Monero. Cursos gratis en YouTube.">
+  <!-- Conectamos la hoja de estilos (el CSS) -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- main agrupa TODO el contenido principal de la página -->
+  <main class="tarjeta">
+
+    <!-- 1. ENCABEZADO: quién eres -->
+    <header>
+      <img class="avatar" src="perfil.jpg" alt="Avatar de DecentraBot: monstruo morado sonriendo">
+      <h1>DecentraBot</h1>
+      <p class="bio">Trading de crypto, acciones, oro y petróleo · Minero de Monero · Cursos gratis en YouTube</p>
+    </header>
+
+    <!-- 2. NAV: enlaces principales. Cada botón es en realidad un <a> (enlace) -->
+    <nav class="enlaces">
+      <a class="boton" href="https://www.youtube.com/@DecentraBot" target="_blank" rel="noopener noreferrer">
+        <span class="icono">&#9654;</span> YouTube — canal completo
+      </a>
+      <a class="boton" href="https://www.tiktok.com/@decentrabot" target="_blank" rel="noopener noreferrer">
+        <span class="icono">&#9834;</span> TikTok — clips y análisis
+      </a>
+    </nav>
+
+    <!-- 3. SECCIÓN DE CURSOS -->
+    <section class="cursos">
+      <h2>Cursos de YouTube</h2>
+
+      <!-- Curso 01: enlace real a la playlist -->
+      <a class="curso" href="https://youtube.com/playlist?list=PLfhyJcKwwiDs" target="_blank" rel="noopener noreferrer">
+        <span class="curso-num">01</span>
+        <span class="curso-info">
+          <strong>Curso de trading desde cero</strong>
+          <small>Gratuito · 2 lecciones y sumando</small>
+        </span>
+        <span class="flecha">&#8594;</span>
+      </a>
+
+      <!-- Curso 02: los videos aún no existen, así que NO es un enlace.
+           Es un <div> (caja neutra) con el estilo .proximamente.
+           Cuando subas los videos, cambia el <div> por un <a> como el 01. -->
+      <div class="curso proximamente">
+        <span class="curso-num">02</span>
+        <span class="curso-info">
+          <strong>Minería desde cualquier computador</strong>
+          <small>En producción…</small>
+        </span>
+        <span class="chip-prox">Próximamente</span>
+      </div>
+    </section>
+
+    <!-- 4. FOOTER: cierre con tu sello -->
+    <footer>
+      <p>#XMR &#127481;&#127483;</p>
+    </footer>
+
+  </main>
+</body>
+</html>
